@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .venv/
+custom_answer_ai/.server.pid
+custom_answer_ai/server.log

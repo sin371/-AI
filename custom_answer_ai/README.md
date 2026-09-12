@@ -5,13 +5,28 @@
 
 ## 실행 방법
 
+### 스크립트로 실행/종료 (추천)
+
+```bash
+cd custom_answer_ai
+./start.sh   # 실행 (백그라운드로 켜고 PID 저장)
+./stop.sh    # 종료
+```
+
+- `start.sh`: 의존성이 없으면 자동 설치 후 백그라운드로 서버를 켭니다. 이미 실행 중이면 그대로 주소만 안내합니다.
+- `stop.sh`: 실행 중인 서버를 안전하게 종료합니다.
+- 기본 포트는 5000이며, `PORT=8080 ./start.sh` 처럼 바꿀 수 있습니다.
+- 로그는 `server.log`에 남습니다.
+
+브라우저에서 http://localhost:5000 접속.
+
+### 직접 실행
+
 ```bash
 cd custom_answer_ai
 pip install -r requirements.txt
 python app.py
 ```
-
-브라우저에서 http://localhost:5000 접속.
 
 ## 사용법
 
