@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>커스텀 답변 AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>내가 원하는 답을 주는 AI</h1>
+      <p class="sub">질문을 등록하고, 그대로 물어보면 등록해둔 답을 돌려드려요.</p>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="ask">질문하기</button>
+      <button class="tab-btn" data-tab="manage">답변 관리</button>
+    </nav>
+
+    <section id="tab-ask" class="tab-panel active">
+      <form id="ask-form">
+        <input id="ask-input" type="text" placeholder="질문을 입력하세요" autocomplete="off" required />
+        <button type="submit">물어보기</button>
+      </form>
+      <div id="ask-result"></div>
+    </section>
+
+    <section id="tab-manage" class="tab-panel">
+      <form id="qa-form">
+        <input type="hidden" id="qa-id" value="" />
+        <input id="qa-question" type="text" placeholder="질문 (예: 오늘 기분 어때?)" required />
+        <textarea id="qa-answer" placeholder="원하는 답변" required></textarea>
+        <div class="form-actions">
+          <button type="submit" id="qa-submit">등록</button>
+          <button type="button" id="qa-cancel" hidden>취소</button>
+        </div>
+      </form>
+
+      <ul id="qa-list"></ul>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
