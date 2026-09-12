@@ -5,7 +5,19 @@
 
 ## 실행 방법
 
-### 스크립트로 실행/종료 (추천)
+Python이 먼저 설치되어 있어야 합니다. Python은 바탕화면에 아이콘이 생기는 프로그램이 아니라
+터미널(명령 프롬프트)에서 실행하는 프로그램입니다. https://www.python.org/downloads/ 에서
+설치할 때 **"Add python.exe to PATH"** 체크박스를 꼭 체크하세요.
+
+### Windows
+
+`custom_answer_ai` 폴더 안의 **`start.bat`을 더블클릭**하면 됩니다.
+- 새 창(검은 콘솔)이 뜨고, 잠시 후 브라우저가 자동으로 열립니다.
+- 그 콘솔 창은 서버가 켜져 있는 동안 계속 떠 있어야 합니다. 닫지 마세요.
+- 종료할 때는 `stop.bat`을 더블클릭하세요.
+- 포트를 바꾸려면 `app.py`의 `PORT` 값을 참고해 환경변수로 지정하세요 (`set PORT=8080` 후 `start.bat` 실행).
+
+### Mac / Linux (터미널)
 
 ```bash
 cd custom_answer_ai
@@ -18,7 +30,7 @@ cd custom_answer_ai
 - 기본 포트는 5000이며, `PORT=8080 ./start.sh` 처럼 바꿀 수 있습니다.
 - 로그는 `server.log`에 남습니다.
 
-브라우저에서 http://localhost:5000 접속.
+어느 방법이든 실행 후 브라우저에서 http://localhost:5000 접속.
 
 ### 직접 실행
 
